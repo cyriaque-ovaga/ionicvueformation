@@ -1,0 +1,13 @@
+ion-toolbar {
+    --background: var(--ion-color-primary);
+    --color: var(--ion-color-primary-contras)
+}
+
+ion-title {
+    width: auto;
+    --color: white;
+}
+
+/* ion-back-button {
+    --color: white;
+} */
