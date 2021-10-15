@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import { defineCustomElements } from "@ionic/pwa-elements/loader";
 
 import { IonicVue } from "@ionic/vue";
 
@@ -36,3 +37,5 @@ app.component("base-layout", BaseLayout);
 router.isReady().then(() => {
   app.mount("#app");
 });
+
+defineCustomElements(window);
