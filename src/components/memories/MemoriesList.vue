@@ -24,14 +24,5 @@ export default defineComponent({
     const router = useRouter();
     return { router };
   },
-  data() {
-    return {};
-  },
-  computed: {
-    // memories() {
-    //   return this.$store.getters.memories;
-    // },
-    //  @click="() => router.push('/memories/' + item.id)"
-  },
 });
 </script>

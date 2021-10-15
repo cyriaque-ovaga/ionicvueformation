@@ -3,14 +3,22 @@
     :page-title="loadedmemory ? loadedmemory.title : 'Loading'"
     page-Default-Back-Link="/memories"
   >
-    <h2 v-if="loadedmemory">{{ loadedmemory.description }}</h2>
+    <MemoriesOverView
+      v-if="loadedmemory"
+      :memory="loadedmemory"
+    ></MemoriesOverView>
+
     <h2 v-else>Il existe pas</h2>
   </base-layout>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import MemoriesOverView from "../components/memories/MemoriesOverView.vue";
 export default defineComponent({
+  components: {
+    MemoriesOverView,
+  },
   data() {
     return {
       memoryId: this.$route.params.id,

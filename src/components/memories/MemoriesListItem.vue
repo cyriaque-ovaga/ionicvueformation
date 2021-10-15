@@ -12,7 +12,7 @@
 <script lang="ts">
 import { IonItem, IonImg, IonThumbnail, IonLabel } from "@ionic/vue";
 import { defineComponent } from "vue";
-import { useRouter } from "vue-router";
+
 export default defineComponent({
   props: ["memory"],
   components: {
@@ -21,13 +21,5 @@ export default defineComponent({
     IonThumbnail,
     IonLabel,
   },
-  setup() {
-    const router = useRouter();
-    return { router };
-  },
-  data() {
-    return {};
-  },
-  computed: {},
 });
 </script>
