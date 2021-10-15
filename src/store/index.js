@@ -28,6 +28,16 @@ const store = createStore({
       ],
     };
   },
+  mutations: {
+    addMemory(state, memory) {
+      state.memories.unshift(memory);
+    },
+  },
+  actions: {
+    addMemory(context, memoryData) {
+      context.commit("addMemory", memoryData);
+    },
+  },
   getters: {
     memories(state) {
       return state.memories;

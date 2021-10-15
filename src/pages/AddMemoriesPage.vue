@@ -1,14 +1,20 @@
 <template>
   <base-layout pageTitle="Add a Memory" pageDefaultBackLink="/memories">
-    <h1>Add a memory</h1>
+    <CreateMemoryForm @savememory="savememory"> </CreateMemoryForm>
   </base-layout>
 </template>
 
 <script lang="ts">
-import baseLayout from "@/components/base/baseLayout.vue";
 import { defineComponent } from "vue";
-
+import CreateMemoryForm from "@/components/memories/CreateMemoryForm.vue";
 export default defineComponent({
-  components: { baseLayout },
+  components: {
+    CreateMemoryForm,
+  },
+  methods: {
+    savememory(memoryData) {
+      this.$store.dispatch("addMemory", memoryData);
+    },
+  },
 });
 </script>
